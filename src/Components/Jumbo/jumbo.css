@@ -1,0 +1,9 @@
+#jumbo{
+    max-height: 30vh;
+}
+
+Container {
+    width: 500px; /* set the width of the carousel */
+    height: 300px; /* set the height of the carousel */
+  }
+  
