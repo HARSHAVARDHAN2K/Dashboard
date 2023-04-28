@@ -15,10 +15,12 @@ import s2 from '../images/s2.jpg'
 import GraphPie from '../Graphs/GraphPie';
 import GraphLinear from '../Graphs/GraphLinear';
 import BarChart from '../Graphs/BarChart';
-import data from '../product.json'
+import axios from 'axios';
  
-function SideBar() {
-  const [dataBase,setDataBase] = useState(data)
+function SideBar(props) {
+  console.log(props.data)
+  console.log(props.h)
+  const [dataBase,setDataBase] = useState(props.data)
   const [product,setProduct] = useState(dataBase[0])
   const [client,setClient] = useState(dataBase[0].client)
   const [proRevenue,setProRevenue] = useState(dataBase[0].revenue)
@@ -81,8 +83,8 @@ function SideBar() {
           <h1>products</h1>         
            <GetProduct products={dataBase}></GetProduct>
         </Menu>
-      </Sidebar>
-    <div className='container'>
+      </Sidebar> 
+     <div className='container'>
         <NavScript></NavScript>
         <div id='product'> 
         <div className="container">
@@ -103,7 +105,7 @@ function SideBar() {
           <div className="row">
             <div className="col-md-12 col-lg-4" style={{overflow: 'scroll', height: '45vh'}}>
               <h1>Clients</h1>
-               <GetClient ClientUsers={client}/>
+               {/* <GetClient ClientUsers={client}/> */}
             </div>
           <div className="col-md-12 col-lg-8">
                <BarChart></BarChart>
