@@ -1,9 +1,10 @@
 import React from "react";
 import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+import "./style.css";
 
 const BarChart = () => {
-  const labels = ["January", "February", "March", "April", "May", "June"];
+  const labels = [2000, 2001, 2002, 2003, 2004, 2005];
   const data = {
     labels: labels,
     datasets: [
@@ -16,7 +17,7 @@ const BarChart = () => {
     ],
   };
   return (
-    <div>
+    <div style={{ width: "90%", marginLeft: "5%", height: "50vh" }}>
       <Bar data={data} />
     </div>
   );

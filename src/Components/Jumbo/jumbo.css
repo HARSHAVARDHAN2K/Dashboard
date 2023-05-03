@@ -1,9 +1,15 @@
-#jumbo{
-    max-height: 30vh;
-}
+ #jumbo div{
+    height: 20vh;
+    padding: 10px;
+ }
 
-Container {
-    width: 500px; /* set the width of the carousel */
-    height: 300px; /* set the height of the carousel */
-  }
-  
+ #jumbo div span{
+    display: block;
+    height: 18vh;
+    width: 100%;
+    margin-top: 1vh;
+    background-color: aqua;
+    border-radius: 5px;
+ }
+
+ 

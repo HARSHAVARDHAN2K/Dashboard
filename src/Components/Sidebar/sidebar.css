@@ -1,5 +1,6 @@
- 
-
-#revenue{
-    width: 100%;
+.container{
+    max-width: inherit;
+    /* overflow-y: scroll; */
 }
+
+ 

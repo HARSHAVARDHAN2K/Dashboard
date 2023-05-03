@@ -11,3 +11,18 @@
    height: 10vh;
 }
 }
+
+/* Customize the scrollbar for the entire page */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+/* Customize the thumb (the part that you drag) */
+::-webkit-scrollbar-thumb {
+  background-color: #7e67bd; /* Set the color of the thumb */
+ 
+}
+
+ 
+
+ 

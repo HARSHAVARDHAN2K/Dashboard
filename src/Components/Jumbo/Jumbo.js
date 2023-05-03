@@ -1,49 +1,42 @@
-import Carousel from 'react-bootstrap/Carousel';
-import myImage from '../images/myImage.jpg'
-import s2 from '../images/s2.jpg'
-import s3 from '../images/s3.jpg'
-import { Container } from 'react-bootstrap';
-import s4 from '../images/s4.jpg'
+import { Container } from "react-bootstrap";
+import "./jumbo.css";
+import ProBar from "../ProgressBar/ProBar";
 
 function Jumbo(props) {
+  // console.log(props.tuser);
   return (
-    <Container id='Jumbo' className='carsoule w-80'>
-        <Carousel variant="dark">
-      <Carousel.Item interval={200}>
-        <img
-          className="d-block w-100"
-          src={s4}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h5>{props.pname}</h5>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item interval={500}>
-        <img
-          className="d-block w-100"
-          src={s4}
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h1>{props.pname}</h1>
-          <p>{props.pdesc}</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={s4}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h5>Number of Users</h5>
-          <h4>{props.puser}</h4>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </Container>
-    
+    <div class="container text-center">
+      <div className="row" id="jumbo">
+        <div className="col-xs-12 col-md-4 col-lg-4">
+          <span>
+            <h1 style={{ padding: "5vh" }}>ProId: #{props.pid}</h1>
+          </span>
+        </div>
+        <div className="col-xs-12 col-md-4 col-lg-4">
+          <span style={{ overflow: "scroll" }}>
+            <b>
+              {props.pname}
+              <br></br>
+            </b>
+            <p style={{ textAlign: "justify", margin: "5px" }}>{props.pdes}</p>
+          </span>
+        </div>
+        <div className="col-xs-12 col-md-4 col-lg-4">
+          <span style={{ display: "flex", justifyContent: "space-around" }}>
+            <ProBar pusers={props.nuser} total={props.tuser}></ProBar>
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "1.5rem",
+                padding: "5.5vh",
+              }}
+            >
+              <b> Number of users</b>
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
 

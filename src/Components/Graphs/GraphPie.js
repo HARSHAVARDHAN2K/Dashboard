@@ -8,7 +8,7 @@ const data = {
   labels: labels,
   datasets: [
     {
-      label: "My First dataset",
+      label: "YEAR V/S REVENUE ",
       backgroundColor: "rgb(255, 99, 132)",
       borderColor: "rgb(255, 99, 132)",
       data: [0, 10, 5, 2, 20, 30, 45],
@@ -18,9 +18,9 @@ const data = {
 
 const GraphPie = () => {
   return (
-    <div style ={{width: '100%', height: '50vh'}}>
+    <div style={{ width: "100%", height: "40vh" }}>
       <Line data={data} />
-       
+      <h6 style={{ textAlign: "center" }}>Heading</h6>
     </div>
   );
 };
